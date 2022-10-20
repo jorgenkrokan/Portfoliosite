@@ -24,11 +24,9 @@
 
   }
   
-
     /*Header section*/
   header{
     display: flex;
-    /*flex-direction: row;*/
     justify-content: space-between;
     align-items: center;
     font-size: 2vw;
@@ -36,7 +34,7 @@
     height: auto;
     position:fixed;
     z-index: 9999;
-    mix-blend-mode: difference;
+    mix-blend-mode: difference; /* Denne gir motsatt farge av bakgrunnen. Hvitt på svart, svart på hvitt og alt i mellom */
   }
 
 .main-nav {
@@ -68,13 +66,13 @@ header ul li a {
 
 .mobile-heading{
   color: white;
-  mix-blend-mode: difference;
+  mix-blend-mode: difference; /* Denne gir motsatt farge av bakgrunnen. Hvitt på svart, svart på hvitt og alt i mellom */
   text-decoration: none;
   margin: 3vw;
   font-size: 40px;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1110px) {
   header{
     font-size: 3vh;
   }
@@ -91,7 +89,7 @@ header ul li a {
   }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1110px) {
   .mobile-header{
     display: none;
   }
@@ -105,12 +103,10 @@ header ul li a {
 
 /*Hero section*/
 section{
-/*   display: flex;
- */  justify-content: center;
+ justify-content: center;
 }
 
 h1{
-  /*font-size: 20em;*/
   font-size: 10vw;
   color: white;
   margin-top: 35vh;
@@ -127,7 +123,6 @@ p{
 .hero{
   height:  100vh;
   display: flex;
-  /*transform: translateY(6vw);*/
 }
 
 .main-header {
@@ -142,15 +137,12 @@ p{
   margin-bottom: 0;
 }
 
-
-
-
 h2{
   font-size: 10vh;
   color: white;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1110px) {
   .main-header{
     display: none;
   }
@@ -163,13 +155,12 @@ h2{
 /*End of hero section*/
 
 /* start of photos section */
-
 .photos-section{
 width: 100%;
 align-items: center;
 flex-direction: column;
  background-color: rgba(3, 3, 3, 0);
- backdrop-filter: blur(15px); 
+ backdrop-filter: blur(15px); /* Denne gir en blir til alt som ligger bak */
 display: flex;
 
 }
@@ -189,14 +180,6 @@ display: flex;
   margin: 0;
 }
 
-/* .people {
-  font-size: 20vh;
-  color: transparent;
-  text-shadow: 0 0 15px #FFFFFF;
-  transform: translate(0vw, 0px) rotate(0deg);
-  z-index: 999;
-} */
-
 .photos img:nth-child(1) {
   transform: translate(-20vw, -0px); 
  }
@@ -206,20 +189,8 @@ display: flex;
  .photos img:nth-child(3) {
   transform: translate(-20vw, -200px);
  }
-/*  .photos img:nth-child(4) {
-  transform: translate(20vw, -300px);
- }
- .photos img:nth-child(5) {
-  transform: translate(-20vw, -400px);
- }
- .photos img:nth-child(6) {
-  transform: translate(20vw, -500px);
- }
- .photos img:nth-child(7) {
-  transform: translate(-20vw, -600px);
- } */
  
-@media screen and (max-width: 720px){
+@media screen and (max-width: 1110px){
   .photos-section{
     width: 100vw;
     align-items: center;
@@ -255,6 +226,7 @@ display: flex;
 
 /* End of photos section */
 
+/* Start of about section */
 .about-section{
   height: 70vh;
   width: 100%;
@@ -343,7 +315,7 @@ h3{
   padding-left: 3vw;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1110px) {
   .about{
    display: none;
   }
@@ -379,3 +351,4 @@ h3{
 
 
  }
+ /* End of about and footer sectioon */
